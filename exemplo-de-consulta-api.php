@@ -20,7 +20,7 @@ $tipo = "2"; // 2 = exibe informações sabre clientes
 $limite = "10"; // limite de exibição dos registros, padrão 10, aceito 20 e 100
 $pesquisa = "cpf"; // perquisar por cpf, id, codigo, nome, email e login
 $busca = "000.000.000-00"; // busca a informação ( no exemplo busca por CPF ), pode-se buscar por Status como I,A,S,N,B,C,NI,R,V
-$ordem = ""; // 
+$ordem = ""; //Ordenar registros por ASC Padrão DESC, Utilizar ordem=ASC, ordem=DESC  
 
 // formando a url no formato: http://endereço-do-servidor/api.php?key=&formato=&tipo=&limite=&pesquisa=&busca=&ordem= 
 $postURL = "$url?key=$apikey&formato=$formato&tipo=$tipo&limite=$limite&pesquisa=$pesquisa&busca=$busca&ordem=$ordem"; 
