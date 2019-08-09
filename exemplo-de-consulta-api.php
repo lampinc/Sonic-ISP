@@ -1,35 +1,36 @@
 <?php
-#Este é um exemplo basico para o consume da API do Sonic ISP vrsão 1.0
+# Este é um exemplo basico para o consume da API do Sonic ISP vrsão 1.0
 ######################################################################
 ######################################################################
 ######################################################################
 
 $ch = curl_init();
 
-// URL do servidor
+# URL do servidor
 $url = "http://172.20.12.178/api.php"; // url do servidor no formato http://endereço-do-serrvidor/api.php
 
-// Chave API 
+# Chave API 
 $apikey = "wKatWCWj0zXkBnpMhuI3QqI23qKY8e68aWF2dqbxJYsKoTPLBPT"; 
-// Formato da requisição
+# Formato da requisição
 $formato = "JSON"; // A api do Sonic ISP suporta consultas JSON e XML
 
-// exemplo de consulta
+# exemplo de consulta
 $tipo = "2"; // 2 = exibe informações sabre clientes
 $limite = "10"; // limite de exibição dos registros, padrão 10, aceito 20 e 100
 $pesquisa = "cpf"; // perquisar por cpf, id, codigo, nome, email e login
 $busca = "000.000.000-00"; // busca a informação ( no exemplo busca por CPF ), pode-se buscar por Status como I,A,S,N,B,C,NI,R,V
 $ordem = ""; //Ordenar registros por ASC Padrão DESC, Utilizar ordem=ASC, ordem=DESC  
 
-// formando a url no formato: http://endereço-do-servidor/api.php?key=&formato=&tipo=&limite=&pesquisa=&busca=&ordem= 
+# formando a url no formato: http://endereço-do-servidor/api.php?key=&formato=&tipo=&limite=&pesquisa=&busca=&ordem= 
 $postURL = "$url?key=$apikey&formato=$formato&tipo=$tipo&limite=$limite&pesquisa=$pesquisa&busca=$busca&ordem=$ordem"; 
 
-// envia os dados por URL
+# envia os dados por URL
 $ch = curl_init ($postURL); 
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true); 
 $returnValue = curl_exec ($ch);
 
 curl_close ($ch);
 
-// emprime o resultado da variavél que contem o retorno da consulta 
+# emprime o resultado da variavél que contem o retorno da consulta 
 echo $returnValue;
+?>
