@@ -1,9 +1,8 @@
 <?php
-/*
-Explo básico para consumo da API do Sonic ISP 5.2.3
-**********************************************************************************
-Este é um exemplo simples para a integração com a API do Sonic ISP utilizando json
-*/
+#Este é um exemplo basico para o consume da API do Sonic ISP vrsão 1.0
+######################################################################
+######################################################################
+######################################################################
 
 $ch = curl_init();
 
